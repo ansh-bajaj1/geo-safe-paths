@@ -18,6 +18,10 @@ import {
   Navigation
 } from "lucide-react";
 import heroImage from "@/assets/hero-safety-system.jpg";
+import InteractiveLiveMap from "./InteractiveLiveMap";
+import SmartSOSButton from "./SmartSOSButton";
+import EmergencyDetectionPanel from "./EmergencyDetectionPanel";
+import IncidentAwarenessWidget from "./IncidentAwarenessWidget";
 
 interface LandingPageProps {
   onNavigate: (page: string) => void;
@@ -78,9 +82,34 @@ const LandingPage = ({ onNavigate }: LandingPageProps) => {
         </div>
       </section>
 
-      {/* Key Features Section */}
+      {/* Advanced Interactive Features */}
       <section className="py-20 bg-gradient-to-br from-background to-accent/5">
         <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-foreground mb-4">
+              Advanced Interactive Safety Features
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Experience cutting-edge AI-powered safety tools with real-time monitoring, 
+              predictive intelligence, and community-verified incident awareness
+            </p>
+          </div>
+
+          {/* Interactive Widgets Grid */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+            <InteractiveLiveMap />
+            <div className="space-y-6">
+              <SmartSOSButton />
+              <div className="grid grid-cols-1 gap-6">
+                <EmergencyDetectionPanel />
+              </div>
+            </div>
+          </div>
+
+          <div className="mb-16">
+            <IncidentAwarenessWidget />
+          </div>
+
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-4">
               Comprehensive Safety Ecosystem
